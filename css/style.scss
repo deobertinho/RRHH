@@ -1,7 +1,20 @@
 $naranja: orange;
 $amarillo: yellow;
 $blanco: white;
+$rojo: #540B0E;
+$auburn: #9E2A2B;
+$color1: #dc5c05;
+$color2: #6ec5b8;
+$color3:#ff9000;
+$color4: #978b7d;
 
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
 // se quita el margen para que ocupe toda la pantalla
 body{
     font-family: 'Open Sans', sans-serif;
@@ -28,11 +41,11 @@ body{
     color: $blanco;
 }
 // se posiciona el menu de perfil hacia la derecha
-.header__menu{
+.header__perfil{
 margin-right: 30px;
 }
 // Se esconde la lista y se posiciona 
-.header__menu ul{
+.header__perfil ul{
     display: none;
     list-style: none;
     padding: 0px;
@@ -41,34 +54,84 @@ margin-right: 30px;
     text-align:right;
     margin: 0px 0px 0px -10px;
 }
-// Se muestra el contenido del menu cuando se pasa el mouse encima
-.header__menu:hover ul, ul:hover {
+// // Se muestra el contenido del menu cuando se pasa el mouse encima
+// .header__perfil:hover ul, ul:hover {
+//     display: block;
+// }
+
+.header__perfil:hover ul {
     display: block;
 }
 // Se le da un color blanco al texto y se quita la decoración
-.header__menu li a {
-    color: white;
+.header__perfil li a {
+    font-size: 15px;
+    color: $blanco;
     text-decoration: none;
 }
 // se subraya la lista cuando se pasa el mouse
-.header__menu li a:hover {
+.header__perfil li a:hover {
     text-decoration: underline;
+    color: $rojo;
 }
 // se posiciona la imagen y la palabra perfil
-.header__menu--profile {
+.header__perfil--profile {
     margin-right: 8px;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 // se le da el tamaño a la imagen y se da posicionamiento
-.header__menu--profile img {
+.header__perfil--profile img {
     margin-right: 8px;
     width: 40px;
 }
 // se asigna un color blanco a la palabra perfil y se quita el margen
-.header__menu--profile p {
+.header__perfil--profile p {
     font-size: 20px;
     margin: 0px;
-    color: white;
+    color: $blanco;
+}
+
+nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column;
+                font-size: 20px;
+}
+.menu {
+    // outline: 1px solid gold;
+    color: $blanco;
+    background-color: $naranja;
+    height: 2rem;
+  }
+
+.menu__container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.menu__item{
+    list-style: none;
+    -webkit-box-flex: 1;
+          -ms-flex: 1;
+            flex: 1;
+    // outline: 1px solid cyan;
+    line-height: 2rem;
+    text-align: center;
+    -webkit-transition: -webkit-box-flex .5s;
+    transition: -webkit-box-flex .5s;
+    transition: flex .5s;
+    transition: flex .5s, -webkit-box-flex .5s, -ms-flex .5s;
+}
+.menu__item:hover{
+    -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 1.5;
+          color: $auburn;
 }
