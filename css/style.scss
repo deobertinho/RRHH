@@ -1,27 +1,74 @@
 $naranja: orange;
 $amarillo: yellow;
+$blanco: white;
 
+// se quita el margen para que ocupe toda la pantalla
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30;
+    margin: 0px;
+}
+// se le da el color a la clase, tamaño y se le da el acomodo al contenido
 .header{
     background-color: $naranja;
     width: 100%;
-    height: 120px;
+    height: 130px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+// se le da el tamaño a la imagen y su ubicación
 .header__img{
     width: 200px;
     margin-top: 10px;
     margin-left: 10px;
 }
-
+// se le da el color al titulo
 .header__title{
-    color: white;
-
+    color: $blanco;
 }
+// se posiciona el menu de perfil hacia la derecha
 .header__menu{
-    width: 200px;
-    margin-top: 10px;
-    margin-left: 10px;
+margin-right: 30px;
+}
+// Se esconde la lista y se posiciona 
+.header__menu ul{
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align:right;
+    margin: 0px 0px 0px -10px;
+}
+// Se muestra el contenido del menu cuando se pasa el mouse encima
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
+// Se le da un color blanco al texto y se quita la decoración
+.header__menu li a {
+    color: white;
+    text-decoration: none;
+}
+// se subraya la lista cuando se pasa el mouse
+.header__menu li a:hover {
+    text-decoration: underline;
+}
+// se posiciona la imagen y la palabra perfil
+.header__menu--profile {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+// se le da el tamaño a la imagen y se da posicionamiento
+.header__menu--profile img {
+    margin-right: 8px;
+    width: 40px;
+}
+// se asigna un color blanco a la palabra perfil y se quita el margen
+.header__menu--profile p {
+    font-size: 20px;
+    margin: 0px;
+    color: white;
 }
